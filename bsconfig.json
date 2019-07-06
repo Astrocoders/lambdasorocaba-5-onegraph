@@ -15,7 +15,10 @@
   "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [
-    "reason-react"
+    "reason-react",
+    "reason-apollo",
+    "reason-apollo-hooks"
   ],
-  "refmt": 3
+  "refmt": 3,
+  "ppx-flags": ["graphql_ppx/ppx"]
 }
