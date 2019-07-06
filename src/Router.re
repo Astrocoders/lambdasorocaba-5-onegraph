@@ -10,6 +10,7 @@ let routeFromPath = (url: ReasonReactRouter.url) =>
   | ["login"] => Login
   | _ => Home
   };
+
 let routeToPath = (route: route) =>
   switch (route) {
   | Home => "/home"

@@ -17,6 +17,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@apollo/react-hooks": "^0.1.0-beta.10",
     "bs-css": "^9.0.1",
     "onegraph-auth": "^1.2.27",
     "react": "^16.8.1",
