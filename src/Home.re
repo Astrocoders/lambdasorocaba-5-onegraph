@@ -1,6 +1,5 @@
 [@react.component]
 let make = () => {
-  let file = React.useState(() => None);
   let inputRef = React.useRef(None);
   let handleInputRef = React.useCallback0((input) => {
     inputRef->React.Ref.setCurrent(Js.Nullable.toOption(input))
