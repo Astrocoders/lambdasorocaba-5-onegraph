@@ -2,7 +2,7 @@ let hypeThreshold = 10000;
 
 module Query = [%graphql
   {|
-  query HomeQuery($name: String, $runQuery: Boolean!) {
+  query HomeQuery($name: String) {
     npm @include(if: $runQuery) {
       package(name:$name) {
         description
@@ -25,7 +25,7 @@ module QueryContainer = ReasonApollo.CreateQuery(Query);
 
 let countHype = (~dependencies) => {
   dependencies->Belt.Array.map(((name, _version)) => {
-    let variables = Query.make(~name, ~runQuery=true, ())##variables;
+    let variables = Query.make(~name, ())##variables;
 
     GraphQLClient.instance##query({ "query": QueryContainer.gql(. Query.query), "variables": variables  });
   })
