@@ -1,3 +1,5 @@
+let hypeThreshold = 10000;
+
 module Query = [%graphql
   {|
   query HomeQuery($name: String, $runQuery: Boolean!) {
@@ -103,7 +105,7 @@ let make = () => {
          {switch (hypeCount) {
           | 0 => <h1> {React.string({j|Você não é hype, bro|j})} </h1>
           | _ as n =>
-            n > 10000
+            n > hypeThreshold
               ? <h1> {React.string({j|Você é hype, bro|j})} </h1>
               : <h1> {React.string({j|Você é quase hype, bro|j})} </h1>
           }}
