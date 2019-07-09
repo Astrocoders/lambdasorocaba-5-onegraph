@@ -1,7 +1,3 @@
-let hypeDeps = [|"react", "react-dom", "graphql", "reason-react"|];
-
-let vcNaoEhHypeBro = [|"jquery", "angular", "handlebars", "axios"|];
-
 module Query = [%graphql
   {|
   query HomeQuery($name: String, $runQuery: Boolean!) {
