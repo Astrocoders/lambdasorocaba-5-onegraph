@@ -1,3 +1,4 @@
+// Took from https://github.com/OneGraph/onegraph-examples/tree/master/spotify-dj/src
 [@bs.deriving abstract]
 type config = {appId: string};
 
